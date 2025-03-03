@@ -1,7 +1,9 @@
 import streamlit as st
 import pandas as pd
 import joblib
+from sklearn.ensemble import ExtraTreesClassifier
 
+model = ExtraTreesClassifier()
 # Loading the trained model
 model = joblib.load('optimized_extra_tree_model.pkl')  # Ensuring correct file path
 
