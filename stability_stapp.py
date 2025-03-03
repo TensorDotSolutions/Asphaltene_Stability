@@ -20,9 +20,9 @@ def predict(resins, asphaltenes):
 def main():
     st.title("Asphaltene Stability Predictor\n(in Crude Oil)")
 
-    # Adding input fields using sliders
-    resins = st.slider("Selecting Resins (0.01 - 25.0)", min_value=0.01, max_value=25.0, value=1.0, step=0.01)
-    asphaltenes = st.slider("Selecting Asphaltenes (0.01 - 25.0)", min_value=0.01, max_value=25.0, value=0.1, step=0.01)
+    # Adding number inputs for Resins and Asphaltenes
+    resins = st.number_input("Entering Resins (0.01 - 25.0)", min_value=0.01, max_value=25.0, step=0.01)
+    asphaltenes = st.number_input("Entering Asphaltenes (0.01 - 25.0)", min_value=0.01, max_value=25.0, step=0.01)
 
     # Handling prediction on button click
     if st.button("Predicting Stability"):
