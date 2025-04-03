@@ -18,12 +18,12 @@ def predict(resins, asphaltenes):
     st.success(f"**{stability.upper()}**")
 
 def main():
-    st.title("Asphaltene Stability Predictor\n(in Crude Oil)")
+    st.title("Imran-Tariq Asphaltene Stability Predictor\n(in Crude Oil)")
 
     # Handling input validation with a loop
     flag: bool = True
     while flag:
-        resins = st.number_input("Entering Resins (1.0 - 25.0)", min_value=1.0, max_value=25.0, step=0.1)
+        resins = st.number_input("Entering Resins", min_value=1.0, max_value=25.0, step=0.1)
         if not (1.0 <= resins <= 25.0):  # Checking if value is out of range
             st.error("Displaying error: Resin value must be between 1.0 and 25.0.")
             flag = False
@@ -32,7 +32,7 @@ def main():
 
     flag: bool = True
     while flag:
-        asphaltenes = st.number_input("Entering Asphaltenes (0.1 - 25.0)", min_value=0.1, max_value=25.0, step=0.1)
+        asphaltenes = st.number_input("Entering Asphaltenes", min_value=0.1, max_value=25.0, step=0.1)
         if not (0.1 <= asphaltenes <= 25.0):  # Checking if value is out of range
             st.error("Displaying error: Asphaltene value must be between 0.1 and 25.0.")
             flag = False
